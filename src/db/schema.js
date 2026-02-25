@@ -25,7 +25,7 @@ export const matchStatusEnum = pgEnum('match_status', ['scheduled', 'live', 'fin
  * - awayScore: Goals/points scored by away team (default: 0)
  * - createdAt: Timestamp when the match record was created
  */
-export const matchesTable = pgTable('matches', {
+export const matches = pgTable('matches', {
 	id: serial('id').primaryKey(),
 	sport: varchar('sport', { length: 50 }).notNull(),
 	homeTeam: varchar('home_team', { length: 100 }).notNull(),
@@ -60,7 +60,7 @@ export const commentaryTable = pgTable('commentary', {
 	id: serial('id').primaryKey(),
 	matchId: integer('match_id')
 		.notNull()
-		.references(() => matchesTable.id, { onDelete: 'cascade' }),
+		.references(() => matches.id, { onDelete: 'cascade' }),
 	minute: integer('minute').notNull(),
 	sequence: integer('sequence').notNull(),
 	period: varchar('period', { length: 50 }).notNull(),
