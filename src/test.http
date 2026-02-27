@@ -1,1 +1,12 @@
-GET http://localhost:8000/matches
+POST http://localhost:8000/matches
+content-type: application/json
+
+{
+    "sport": "cricket",
+    "homeTeam": "India",
+    "awayTeam": "Zimbabwe",
+    "homeTeamGoals": 256,
+    "awayTeamGoals": 184,
+    "startTime": "2026-02-24T10:00:00Z",
+    "endTime": "2026-02-24T18:00:00Z"
+}
