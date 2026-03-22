@@ -4,7 +4,7 @@ import { wsArcjet } from '../arcjet.js';
 const matchSubscribers = new Map();
 
 function subscribe(matchId, socket) {
-    if (!matchSubscribers.has(socket))
+    if (!matchSubscribers.has(matchId))
     {
         matchSubscribers.set(matchId, new Set());
     }
