@@ -31,8 +31,6 @@ function cleanUpSubscriptions(socket) {
     }
 }
 
-
-
 function sendJson(socket, payLoad) {
     if(socket.readyState !== WebSocket.OPEN) return ;
 
