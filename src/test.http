@@ -1,12 +1,12 @@
-POST http://localhost:8000/matches
-content-type: application/json
+POST http://localhost:8000/matches/2/commentary
+Content-Type: application/json
 
 {
-    "sport": "cricket",
-    "homeTeam": "India",
-    "awayTeam": "Zimbabwe",
-    "homeTeamGoals": 256,
-    "awayTeamGoals": 184,
-    "startTime": "2026-02-24T10:00:00Z",
-    "endTime": "2026-02-24T18:00:00Z"
+  "minutes": 44,
+  "sequence": 123,
+  "period": "FIRST_HALF",
+  "eventType": "GOAL",
+  "actor": "messi",
+  "team": "Drizzle FC",
+  "message": "What a goal! Drizzle FC takes the lead with an incredible strike from their star player!"
 }
