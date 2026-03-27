@@ -2,11 +2,11 @@ POST http://localhost:8000/matches/2/commentary
 Content-Type: application/json
 
 {
-  "minutes": 44,
+  "minutes": 54,
   "sequence": 123,
-  "period": "FIRST_HALF",
+  "period": "Second_Half",
   "eventType": "GOAL",
-  "actor": "messi",
-  "team": "Drizzle FC",
-  "message": "What a goal! Drizzle FC takes the lead with an incredible strike from their star player!"
+  "actor": "Raviteja",
+  "team": "Barcelona FC",
+  "message": "Wow! What a goal by Raviteja for Barcelona FC in the 54th minute of the second half!"
 }
